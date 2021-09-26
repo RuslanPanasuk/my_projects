@@ -15,6 +15,15 @@ body {
     margin: 0 auto;    
 }
 
+.section-title {
+    font-family: "Forum", cursive;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -48,10 +57,6 @@ body {
     display: flex;
 }
 
-.header-nav-item {
-
-}
-
 .header-nav-link {
     padding-right: 55px;
     line-height: 26px;
@@ -60,4 +65,86 @@ body {
 
 li:last-child .header-nav-link {
     padding-right: 0;
+}
+
+.welcome-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 842px;
+    padding-top: 32px;    
+}
+
+.welcome-card {
+    z-index: 10;
+    width: 598px;
+    height: 388px;
+    margin-top: 150px;
+}
+
+.welcome-card-title {
+    margin-bottom: 25px;
+}
+
+.welcome-card-text {
+    margin-bottom: 75px;    
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33px;   
+    letter-spacing: 2px;
+}
+
+.welcome-card-btn {
+    display: inline-block;    
+    width: 360px;
+    height: 75px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 75px;
+    letter-spacing: 2px;
+    background: #710707;
+    border-radius: 10px;
+}
+
+.welcome-slider {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-self: end;
+    z-index: 1;
+    width: 1000px;
+    height: 810px;
+}
+
+.welcome-slider-body {
+    width: 1000px;
+    height: 750px;
+}
+
+.welcome-slider-controls {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 600px;
+    height: 120px;
+    background-color: #030303;
+}
+
+.btn {
+    width: 30px;
+    height: 8px;    
+}
+
+.controls-prev-btn {
+    margin-right: 20px;
+    background-image: url("assets/svg/prev_btn.svg");
+}
+
+.controls-next-btn {
+    margin-right: 75px;
+    background-image: url("assets/svg/next_btn.svg");
 }
