@@ -31,5 +31,6 @@ const slider2 = tns({
   "items": 3,
   "gutter": 42,
   "swipeAngle": false,
-  "speed": 400
+  "speed": 400,
+  "controlsContainer": ".video-slider-controls",
 });
