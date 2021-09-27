@@ -357,3 +357,64 @@ p.explore-text > span {
     margin-top: 50px;
 }
 
+/* __________________________________________________________________________ */
+
+.tickets-container {
+    height: 1368px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+
+
+
+/* __________________________________________________________________________ */
+
+.contacts-container {
+    height: 1053px;
+}
+
+.contacts-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 103px;
+}
+
+.contact-info {    
+    width: 282px;
+    color: #000000;
+}
+
+.contact-info > p {
+    margin-bottom: 25px;
+}
+
+.contact-info-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 50px;
+}
+
+.contact-map {
+    width: 960px;
+    height: 620px;
+    background-image: url(assets/img/Map.jpg);
+}
+
+
+
+
+/* __________________________________________________________________________ */
+.footer-container {
+    height: 240px;
+}
+
+
+
+
+
+/* __________________________________________________________________________ */
+
+
