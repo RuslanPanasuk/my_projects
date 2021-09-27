@@ -26,3 +26,17 @@ const slider = tns({
   // }
 });
 
+const slider2 = tns({
+  container: '.video-slider-body',
+  loop: true,
+  items: 3,
+  slideBy: 'page',
+  nav: false,
+  // navContainer: '.controls-dots',    
+  autoplay: false,
+  speed: 400,
+  autoplayButtonOutput: false,
+  mouseDrag: true,
+  lazyload: true,
+  controlsContainer: ".video-slider-controls", 
+});

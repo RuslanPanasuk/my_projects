@@ -257,3 +257,35 @@ p.explore-text > span {
     height: 700px;
     margin-top: 15px;
 }
+
+/* __________________________________________________________________________ */
+
+.video-container {
+    height: 1396px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    color: #000000;
+}
+
+.video-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 165px;
+}
+
+.video-title {
+    color: #9D8665;
+}
+
+.video-text {
+    width: 720px;
+    
+}
+
+.video-player-img {
+    width: 100%;
+    height: 100%;    
+}
+       
+        
