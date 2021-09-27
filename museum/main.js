@@ -26,17 +26,10 @@ const slider = tns({
   // }
 });
 
-const slider2 = tns({
-  container: '.video-slider-body',
-  loop: true,
-  items: 3,
-  slideBy: 'page',
-  nav: false,
-  // navContainer: '.controls-dots',    
-  autoplay: false,
-  speed: 400,
-  autoplayButtonOutput: false,
-  mouseDrag: true,
-  lazyload: true,
-  controlsContainer: ".video-slider-controls", 
+const slider2 = tns({  
+  "container": ".video-slider-body",
+  "items": 3,
+  "gutter": 42,
+  "swipeAngle": false,
+  "speed": 400
 });
