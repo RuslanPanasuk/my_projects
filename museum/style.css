@@ -168,7 +168,7 @@ li:last-child .header-nav-link {
 
 
 .container-visiting {
-    height: 1266px;
+    min-height: 1266px;
     padding-top: 75px;        
 }
 
@@ -218,4 +218,42 @@ li:last-child .header-nav-link {
     font-weight: 200;
     font-size: 18px;
     line-height: 21px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.explore-container {
+    display: flex;
+    justify-content: space-between;
+    height: 865px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.explore-content {
+    width: 660px;
+}
+
+.explore-title {
+    margin-bottom: 103px;
+    color: #ffffff;
+}
+
+.explore-title::after {
+    width: 660px;
+}
+
+.explore-text {
+    margin-bottom: 25px;
+    line-height: 38px;
+}
+
+p.explore-text > span {
+    color: #CAAA7D;
+}
+
+.explore-slider{    
+    width: 720px;
+    height: 700px;
+    margin-top: 15px;
 }
