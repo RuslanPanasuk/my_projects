@@ -303,6 +303,7 @@ p.explore-text > span {
 }
 
 .video-btn {
+    display: inline-block;
     width: 10px;
     height: 12px;
     fill: #999999; 
