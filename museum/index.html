@@ -191,9 +191,50 @@
         </section>
         <section class="tickets" id="tickets">
             <div class="tickets-container container">
-                <h2 class="section-title underline-title">BUY TICKETS</h2>
-                
+                <h2 class="section-title underline-title tickets-title">BUY TICKETS</h2>
+                <div class="tickets-content">
+                    <div class="tickets-picture">
+                        <img class="tickets-img" src="assets/img/tickets_img.jpg" alt="image">
+                    </div>
+                    <form action="post" class="ticket-type-form">
+                        <h3 class="ticket-type-title">Ticket Type</h3>
+                        <label class="input-container">Permanent exhibition
+                            <input type="radio" checked="checked" name="ticket-type-radio">
+                            <span class="input-checkmark"></span>
+                        </label>
+                        <label class="input-container">Temporary exhibition
+                            <input type="radio" name="ticket-type-radio">
+                            <span class="input-checkmark"></span>
+                        </label>
+                        <label class="input-container">Combined Admission
+                            <input type="radio" name="ticket-type-radio">
+                            <span class="input-checkmark"></span>
+                        </label>                        
+                    </form>
+                    <form action="post" class="tickets-amount-form">
+                        <h3 class="tickets-amount-title">Amount</h3>
+                        <fildset class="tickets-amount-item">
+                            <legend>Basic 18+</legend>
+                            <p class="tickets-amount-box">
+                                <button class="amount-btn button" type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number">
+                                <button class="amount-btn btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </p>
+                        </fildset>
+                        <fildset class="tickets-amount-item">
+                            <legend>Senior 65+</legend>
+                            <p class="tickets-amount-box">
+                                <button class="amount-btn button" type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                                <input type="number" min="0" max="20" value="1" readonly class="number">
+                                <button class="amount-btn btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </p>
+                        </fildset>
+                        <div class="total-amount">Total €220</div>
+
+                    </form>
+                </div>                
             </div>
+            <div class="tickets-parallax"></div>
         </section>
         <section class="contacts" id="contacts">
             <div class="contacts-container container">
@@ -265,8 +306,7 @@
                 </div>
             </div>
         </div>
-    </footer>
-    
+    </footer>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="main.js"></script>    
 </body>
