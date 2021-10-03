@@ -44,6 +44,27 @@ body {
     border-radius: 0px;
 }
 
+.button:hover {
+    background-color: #9d8665;
+    color: #000000;
+}
+
+.link:hover {
+    color: #9d8665;
+}
+
+.link:active {
+    color: #7e6c51;
+}
+
+.btn:hover {
+    filter: invert(0.5) sepia(1);
+}
+
+.icon:hover {
+    filter: invert(0.5) sepia(1);
+}
+
 
 
 /* __________________________________________________________________________ */
@@ -304,9 +325,9 @@ p.explore-text > span {
     height: 100%;    
 }
 
-.video-slider-controls {
+/* .video-slider-controls {
     
-}
+} */
 
 .video-btn {
     display: inline-block;
@@ -333,10 +354,6 @@ p.explore-text > span {
     overflow-y: hidden;
     height: 2200px;
     padding-top: 75px;
-}
-
-.gallery-title {
-    
 }
 
 .gallery-inner-container {
@@ -443,12 +460,7 @@ p.explore-text > span {
   .input-container:hover input ~ .input-checkmark {
     border: 2px solid #9d8665;
   }
-  
-  /* When the radio button is checked, add a blue background */
-  .input-container input:checked ~ .input-checkmark {
-    /* background-color: #2196F3; */
-  }
-  
+   
   /* Create the indicator (the dot/circle - hidden when not checked) */
   .input-checkmark:after {
     content: "";
@@ -474,8 +486,9 @@ p.explore-text > span {
 .tickets-amount-form {
     display: flex;
     flex-direction: column;
+    align-items: end;
     margin-left: auto;
-    width: 150px;
+    width: 175px;
     height: 341px;
 }
 
@@ -512,6 +525,7 @@ p.explore-text > span {
     height: 44px;
     font-size: 32px;
     font-weight: 400;
+    line-height: 100%;
     background-color: #ffffff;
 }
 
@@ -523,9 +537,18 @@ p.explore-text > span {
     margin-top: auto;;
 }
 
+.tickets-btn {
+    width: 175px;
+    height: 50px;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 52px;
+    letter-spacing: 2px;
+}
+
 .number {
     all: unset;
-    width: 3em;
+    width: 2em;
     text-align: center;
 }
 
