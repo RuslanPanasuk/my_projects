@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Roboto", serif;
     font-size: 22px;
@@ -39,6 +43,29 @@ body {
     background: #710707;
     border-radius: 0px;
 }
+
+.button:hover {
+    background-color: #9d8665;
+    color: #000000;
+}
+
+.link:hover {
+    color: #9d8665;
+}
+
+.link:active {
+    color: #7e6c51;
+}
+
+.btn:hover {
+    filter: invert(0.5) sepia(1);
+}
+
+.icon:hover {
+    filter: invert(0.5) sepia(1);
+}
+
+
 
 /* __________________________________________________________________________ */
 
@@ -298,9 +325,9 @@ p.explore-text > span {
     height: 100%;    
 }
 
-.video-slider-controls {
+/* .video-slider-controls {
     
-}
+} */
 
 .video-btn {
     display: inline-block;
@@ -327,10 +354,6 @@ p.explore-text > span {
     overflow-y: hidden;
     height: 2200px;
     padding-top: 75px;
-}
-
-.gallery-title {
-    
 }
 
 .gallery-inner-container {
@@ -361,13 +384,182 @@ p.explore-text > span {
 /* __________________________________________________________________________ */
 
 .tickets-container {
-    height: 1368px;
+    height: 893px;
     padding-top: 75px;
     padding-bottom: 75px;
+    color: #000000;
 }
 
+.tickets-content {
+    display: flex;
+    flex-wrap: wrap;    
+}
 
+.tickets-title {
+    margin-bottom: 103px;
+}
 
+.tickets-picture {
+    max-width: 720px;
+    height: 550px;
+    margin-right: 60px;
+}
+
+.tickets-img {
+    display: inline-block;
+    width: 100%;
+}
+
+.ticket-type-form {
+    justify-self: start;
+    width: 270px;
+    height: 211px;
+}
+
+.ticket-type-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    margin-bottom: 50px;
+}
+
+/* The container */
+.input-container {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .input-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .input-checkmark {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    line-height: 26px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .input-container:hover input ~ .input-checkmark {
+    border: 2px solid #9d8665;
+  }
+   
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .input-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .input-container input:checked ~ .input-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .input-container .input-checkmark:after {
+      top: 3px;
+      left: 3px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #000000;
+  }
+
+.tickets-amount-form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: auto;
+    width: 175px;
+    height: 341px;
+}
+
+.tickets-amount-title {
+    align-self: end;    
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    margin-bottom: 25px;
+}
+
+.tickets-amount-item {
+    width: 150px;
+    height: 101px;
+    padding-bottom: 10px;
+}
+
+.tickets-amount-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: 3px solid #000000;
+    margin-top: 15px;
+}
+
+.amount-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 46px;
+    height: 44px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 100%;
+    background-color: #ffffff;
+}
+
+.total-amount {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 1.65px;
+    margin-top: auto;;
+}
+
+.tickets-btn {
+    width: 175px;
+    height: 50px;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 52px;
+    letter-spacing: 2px;
+}
+
+.number {
+    all: unset;
+    width: 2em;
+    text-align: center;
+}
+
+.tickets-parallax {
+    width: 100%;
+    height: 475px;
+    margin-bottom: 75px;
+    background-image: url(assets/img/parallax.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 /* __________________________________________________________________________ */
 
@@ -417,6 +609,7 @@ p.explore-text > span {
     width: 100%;
     min-height: 265px;
     padding-top: 75px;
+    border-bottom: 3px solid #666666;
 }
 
 .footer-logo {
@@ -531,9 +724,6 @@ li:nth-child(6) .footer-nav-link {
     width: 100%;
     height: 124px;
 }
-
-
-
 
 
 /* __________________________________________________________________________ */
