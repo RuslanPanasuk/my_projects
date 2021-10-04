@@ -728,4 +728,13 @@ li:nth-child(6) .footer-nav-link {
 
 /* __________________________________________________________________________ */
 
-
+@media (max-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+  }
+  @media (max-width: 796px) {
+    .container {
+        max-width: 796px;
+    }    
+  }
