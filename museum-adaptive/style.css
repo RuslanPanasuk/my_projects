@@ -112,6 +112,18 @@ li:last-child .header-nav-link {
     padding-right: 0;
 }
 
+.humburger-icon {
+    display: none;    
+    width: 32px;
+    height: 18px;
+}
+
+.humburger-icon-item {
+    width: 32px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
 /* __________________________________________________________________________ */
 
 .welcome-container {
@@ -206,6 +218,7 @@ li:last-child .header-nav-link {
 
 .visiting-cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 75px 60px;
     padding-top: 100px;
@@ -243,6 +256,11 @@ li:last-child .header-nav-link {
     height: 2px;
     background: #710707;
     border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+.visiting-card-title:hover:after {
+    width: 100%;
 }
 
 .visiting-card-text {
@@ -730,8 +748,606 @@ li:nth-child(6) .footer-nav-link {
 
 @media (max-width: 1024px) {
     .container {
-        max-width: 1024px;
+        max-width: 984px;   
     }
+    
+    .section-title {        
+        font-size: 50px;        
+    }    
+        
+    .underline-title::after {
+        bottom: -20px;        
+    } 
+    
+    /* __________________________________________________________________________ */
+    
+    .header-container {
+        height: 130px;    
+    }
+    
+    .header-logo {
+        width: 189px;
+    }
+    
+    .header-nav {
+        display: none;
+    }
+
+    .humburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    /* .header-nav-link {
+        padding-right: 55px;
+        line-height: 26px;
+        letter-spacing: 2px;
+    }
+    
+    li:last-child .header-nav-link {
+        padding-right: 0;
+    } */
+    
+    /* __________________________________________________________________________ */
+    
+    .welcome-container {
+        height: 585px;
+        padding-top: 0px;    
+    }
+    
+    .welcome-card {        
+        width: 400px;
+        height: 100%;
+        margin-top: 50px;
+    }
+    
+    .welcome-card-title {
+        margin-bottom: 20px;
+        line-height: 90px;
+    }
+    
+    .welcome-card-text {
+        margin-bottom: 50px;    
+        font-size: 24px;
+        line-height: 28px;        
+    }
+    
+    .welcome-card-btn {            
+        width: 300px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+    }
+    
+    .welcome-slider {
+        z-index: 1;
+        width: 700px;
+        height: 585px;
+    }
+    
+    .welcome-slider-body {
+        width: 700px;
+        height: 525px;
+    }
+    
+    .welcome-slider-controls {
+        width: 700px;
+    }    
+    
+    /* __________________________________________________________________________ */
+    
+    .container-visiting {
+        min-height: 1433px;
+        padding-top: 60px;
+        padding-bottom: 60px;       
+    }
+    
+    .visiting-cards {        
+        gap: 60px 108px;
+        padding-top: 83px;  
+    }
+    
+    .visiting-cards-item {
+        width: 330px;
+        height: 345px;
+    }
+        
+    .visiting-card-title {
+        font-size: 28px;
+        line-height: 31px;
+        letter-spacing: 3px;
+    }
+    
+    .visiting-card-title::after {
+        width: 150px;
+    }
+
+    .visiting-card-subhed {
+        font-size: 20px;
+        line-height: 23px;
+    }
+    
+    .visiting-card-text {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    
+    /* ------------------------------------------------------------------------------------------ */
+    
+    .explore-container {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1269px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .explore-content {
+        width: 100%;
+    }
+    
+    .explore-title {
+        margin-bottom: 83px;
+    }
+    
+    .explore-title::after {
+        width: 100%;
+    }
+    
+    .explore-text { 
+        width: 95%;       
+        margin-bottom: 9px;
+        font-size: 20px;
+        line-height: 38px;
+    }
+    
+    .explore-last {
+        display: none;
+    }
+    
+    .explore-slider{
+        margin: 0 auto;        
+        margin-top: 0px;
+    }
+    
+    /* __________________________________________________________________________ */
+    
+    .video-container {
+        height: 1396px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        color: #000000;
+    }
+    
+    .video-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 165px;
+    }
+    
+    .video-title {
+        color: #9D8665;
+    }
+    
+    .video-text {
+        width: 720px;
+        
+    }
+    
+    .video-slider {
+        margin-top: 40px;
+    }
+    
+    
+    .video-player-img {
+        width: 100%;
+        height: 100%;    
+    }
+    
+    /* .video-slider-controls {
+        
+    } */
+    
+    .video-btn {
+        display: inline-block;
+        width: 10px;
+        height: 12px;
+        fill: #999999; 
+        stroke: #ff6c00;   
+    }
+    
+    .video-controls-prev {
+        /* margin-right: 20px; */
+        background-image: url("assets/svg/video_prev_btn.svg");
+        color: #000000;
+    }
+    
+    .video-controls-next {
+        /* margin-right: 75px; */
+        background-image: url("assets/svg/video_next_btn.svg");
+    }
+    
+    /* __________________________________________________________________________ */
+           
+    .gallery-container {
+        overflow-y: hidden;
+        height: 2200px;
+        padding-top: 75px;
+    }
+    
+    .gallery-inner-container {
+        padding-top: 75px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: space-between;    
+        height: 3000px;
+    }
+    
+    .gallery-item {
+        display: block;
+        width: 456px;
+        height: auto;
+        margin-bottom: 24px;
+    }
+    
+    .gallery-item:first-child {
+        margin-top: 50px;
+    }
+    
+    .gallery-item:nth-child(11) {
+        margin-top: 50px;
+    }
+    
+    /* __________________________________________________________________________ */
+    
+    .tickets-container {
+        height: 893px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        color: #000000;
+    }
+    
+    .tickets-content {
+        display: flex;
+        flex-wrap: wrap;    
+    }
+    
+    .tickets-title {
+        margin-bottom: 103px;
+    }
+    
+    .tickets-picture {
+        max-width: 720px;
+        height: 550px;
+        margin-right: 60px;
+    }
+    
+    .tickets-img {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .ticket-type-form {
+        justify-self: start;
+        width: 270px;
+        height: 211px;
+    }
+    
+    .ticket-type-title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33px;
+        margin-bottom: 50px;
+    }
+    
+    /* The container */
+    .input-container {
+        display: block;
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      /* Hide the browser's default radio button */
+      .input-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      
+      /* Create a custom radio button */
+      .input-checkmark {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        height: 17px;
+        width: 17px;
+        border-radius: 50%;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        line-height: 26px;
+      }
+      
+      /* On mouse-over, add a grey background color */
+      .input-container:hover input ~ .input-checkmark {
+        border: 2px solid #9d8665;
+      }
+       
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .input-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      /* Show the indicator (dot/circle) when checked */
+      .input-container input:checked ~ .input-checkmark:after {
+        display: block;
+      }
+      
+      /* Style the indicator (dot/circle) */
+      .input-container .input-checkmark:after {
+          top: 3px;
+          left: 3px;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: #000000;
+      }
+    
+    .tickets-amount-form {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-left: auto;
+        width: 175px;
+        height: 341px;
+    }
+    
+    .tickets-amount-title {
+        align-self: end;    
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33px;
+        margin-bottom: 25px;
+    }
+    
+    .tickets-amount-item {
+        width: 150px;
+        height: 101px;
+        padding-bottom: 10px;
+    }
+    
+    .tickets-amount-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        height: 50px;
+        border: 3px solid #000000;
+        margin-top: 15px;
+    }
+    
+    .amount-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        width: 46px;
+        height: 44px;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 100%;
+        background-color: #ffffff;
+    }
+    
+    .total-amount {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 1.65px;
+        margin-top: auto;;
+    }
+    
+    .tickets-btn {
+        width: 175px;
+        height: 50px;
+        background-color: #000000;
+        color: #ffffff;
+        margin-top: 52px;
+        letter-spacing: 2px;
+    }
+    
+    .number {
+        all: unset;
+        width: 2em;
+        text-align: center;
+    }
+    
+    .tickets-parallax {
+        width: 100%;
+        height: 475px;
+        margin-bottom: 75px;
+        background-image: url(assets/img/parallax.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    /* __________________________________________________________________________ */
+    
+    .contacts-container {
+        height: 1053px;
+    }
+    
+    .contacts-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 103px;
+    }
+    
+    .contact-info {    
+        width: 282px;
+        color: #000000;
+    }
+    
+    .contact-info > p {
+        margin-bottom: 25px;
+    }
+    
+    .contact-info-title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 50px;
+    }
+    
+    .contact-map {
+        width: 960px;
+        height: 620px;
+        background-image: url(assets/img/Map.jpg);
+    }
+    
+    
+    
+    
+    /* __________________________________________________________________________ */
+    .footer-container {
+        min-height: 392px;
+    }
+    
+    .footer-content {
+        display: flex;
+        width: 100%;
+        min-height: 265px;
+        padding-top: 75px;
+        border-bottom: 3px solid #666666;
+    }
+    
+    .footer-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 195px;
+        height: 50px;
+        margin-right: 145px;
+    }
+    
+    .footer-logo-img {
+        display: block;
+        width: 50px;
+        height: 34px;
+        background-image: url("assets/svg/logo.svg");
+        background-repeat: no-repeat;
+    }
+    
+    .footer-logo-text {
+        font-family: "Forum", cursive;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    
+    
+    .footer-nav {
+        display: flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 363px;
+        height: 128px;
+          
+    }
+    
+    .footer-nav-link {
+        display: block;
+        width: 107px;
+        margin-bottom: 25px;
+        line-height: 26px;
+        letter-spacing: 2px;
+    }
+    
+    li:nth-child(3) .footer-nav-link,
+    li:nth-child(6) .footer-nav-link {
+        margin-bottom: 0;
+    }
+    
+    .footer-social {
+        margin-left: 397px;
+        display: flex;
+        justify-content: space-between;
+        width: 340px;
+        height: 48px;
+        margin-top: 87px;
+    }
+    
+    .footer-social-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 48px;
+        height: 48px;
+        border-radius: 50px;
+        border: 1px solid #666666;    
+        filter: drop-shadow(0px 0px 0px #666666);
+    }
+    
+    .social-img {
+        display: block;
+    }
+    
+    .social-youtube {
+        width: 23px;
+        height: 16px;
+        background-image: url(assets/svg/youtube.svg);
+    }
+    
+    .social-instagram {
+        width: 20px;
+        height: 20px;
+        background-image: url(assets/svg/instagram.svg);
+    }
+    
+    .social-facebook {
+        width: 13px;
+        height: 20px;
+        background-image: url(assets/svg/facebook.svg);
+    }
+    
+    .social-twitter {
+        width: 20px;
+        height: 16px;
+        background-image: url(assets/svg/twitter.svg);
+    }
+    
+    .social-pinterest {
+        width: 20px;
+        height: 20px;
+        background-image: url(assets/svg/pinterest.svg);
+    }
+    
+    .footer-rights {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 124px;
+    }
+    
+    
+    /* __________________________________________________________________________ */
   }
   @media (max-width: 796px) {
     .container {
