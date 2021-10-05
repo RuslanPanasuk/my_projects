@@ -10,7 +10,7 @@ const slider = tns({
   autoplayButtonOutput: false,
   mouseDrag: true,
   lazyload: true,
-  controlsContainer: ".welcome-slider-controls",  
+  controlsContainer: ".controls-arrows",  
   // responsive: {
   //   640: {
   //     edgePadding: 20,
@@ -29,6 +29,7 @@ const slider = tns({
 const slider2 = tns({  
   "container": ".video-slider-body",
   "items": 3,
+  "nav": false,
   "gutter": 42,
   "swipeAngle": false,
   "speed": 400,
