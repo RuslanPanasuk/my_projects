@@ -914,17 +914,14 @@ li:nth-child(6) .footer-nav-link {
     /* __________________________________________________________________________ */
     
     .video-container {
-        height: 1396px;
-        padding-top: 75px;
-        padding-bottom: 75px;
-        color: #000000;
+        height: 1001px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     
     .video-content {
-        display: flex;
-        justify-content: space-between;
         width: 100%;
-        height: 165px;
+        height: 115px;
     }
     
     .video-title {
@@ -932,8 +929,7 @@ li:nth-child(6) .footer-nav-link {
     }
     
     .video-text {
-        width: 720px;
-        
+        display: none;        
     }
     
     .video-slider {
@@ -943,53 +939,29 @@ li:nth-child(6) .footer-nav-link {
     
     .video-player-img {
         width: 100%;
-        height: 100%;    
+        height: auto;    
+    }
+
+    .video-slider-body {
+        height: 170px;
     }
     
-    /* .video-slider-controls {
         
-    } */
-    
-    .video-btn {
-        display: inline-block;
-        width: 10px;
-        height: 12px;
-        fill: #999999; 
-        stroke: #ff6c00;   
-    }
-    
-    .video-controls-prev {
-        /* margin-right: 20px; */
-        background-image: url("assets/svg/video_prev_btn.svg");
-        color: #000000;
-    }
-    
-    .video-controls-next {
-        /* margin-right: 75px; */
-        background-image: url("assets/svg/video_next_btn.svg");
-    }
-    
     /* __________________________________________________________________________ */
            
     .gallery-container {
-        overflow-y: hidden;
-        height: 2200px;
-        padding-top: 75px;
+        height: 1460px;
+        padding-top: 60px;
     }
     
     .gallery-inner-container {
-        padding-top: 75px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-content: space-between;    
-        height: 3000px;
+        padding-top: 60px;            
+        height: 2200px;
     }
     
     .gallery-item {
         display: block;
-        width: 456px;
+        width: 304px;
         height: auto;
         margin-bottom: 24px;
     }
