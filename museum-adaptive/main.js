@@ -31,12 +31,22 @@ window.onload = function () {
 
   const slider2 = tns({  
     "container": ".video-slider-body",
-    "items": 3,
+    "items": 2,
     "nav": false,
-    "gutter": 42,
+    "gutter": 20,
     "swipeAngle": false,
     "speed": 400,
     "controlsContainer": ".video-slider-controls",
+    "responsive": {
+      "768": {
+        "items": 2,
+        "gutter": 20,  
+      },
+      "1024": {
+        "items": 3,
+        "gutter": 42,  
+      },     
+    },
   });
 
 
