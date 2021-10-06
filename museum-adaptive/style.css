@@ -70,6 +70,7 @@ body {
 /* __________________________________________________________________________ */
 
 .header-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,6 +123,14 @@ li:last-child .header-nav-link {
     width: 32px;
     height: 2px;
     background-color: #ffffff;
+}
+
+.side-menu {
+    display: none;
+}
+
+.icon-close {
+    display: none;
 }
 
 /* __________________________________________________________________________ */
@@ -198,6 +207,10 @@ li:last-child .header-nav-link {
     height: 8px;    
 }
 
+.controls-arrows {
+    display: flex;
+}
+
 .controls-prev-btn {
     margin-right: 20px;
     background-image: url("assets/svg/prev_btn.svg");
@@ -206,6 +219,33 @@ li:last-child .header-nav-link {
 .controls-next-btn {
     margin-right: 75px;
     background-image: url("assets/svg/next_btn.svg");
+}
+
+.controls-num {
+    width: 76px;
+    height: 40px;
+    margin-right: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls-num-item {    
+    line-height: 40px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.controls-dots {
+    height: 16px;
+    display: flex;
+    margin-right: 35px;    
+}
+
+.controls-dots-item {
+    width: 16px;
+    height: 16px;
+    margin-right: 25px;
+    background-color: #ffffff;
 }
 
 /* __________________________________________________________________________ */
@@ -334,18 +374,26 @@ p.explore-text > span {
 }
 
 .video-slider {
-    margin-top: 40px;
+    width: 100%;
+    height: 306px;
+    margin-top: 40px;    
 }
 
+.video-slider-body {
+    width: 100%;
+    height: 254px;
+}
 
 .video-player-img {
     width: 100%;
     height: 100%;    
 }
 
-/* .video-slider-controls {
-    
-} */
+.video-slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+}
 
 .video-btn {
     display: inline-block;
@@ -579,6 +627,24 @@ p.explore-text > span {
     background-attachment: fixed;
 }
 
+/* ---------------------------------------- */
+
+.booking-tickets {
+    display: none;
+
+    z-index: 100;
+    background-color: red;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 1440;
+    max-height: 845;
+    margin: 0 auto;
+    padding-top: 91px;
+    padding-bottom: 91px;
+}
+
 /* __________________________________________________________________________ */
 
 .contacts-container {
@@ -681,7 +747,7 @@ li:nth-child(6) .footer-nav-link {
 }
 
 .footer-social {
-    margin-left: 397px;
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
     width: 340px;
@@ -778,18 +844,64 @@ li:nth-child(6) .footer-nav-link {
         flex-direction: column;
         justify-content: space-between;
     }
-    
-    /* .header-nav-link {
-        padding-right: 55px;
-        line-height: 26px;
-        letter-spacing: 2px;
+        
+    .icon-close {
+        display: none;
+        width: 32px;
+        height: 18px;
+    }
+
+    .item-close {
+        width: 32px;
+        height: 2px;
+        background-color: #ffffff;
+    }
+
+    .item-close1 {
+        transform: rotateZ(45deg) translateY(0.5px);        
+    }
+
+    .item-close2 {
+        transform: rotateZ(-45deg);
+    }
+
+    .side-menu {
+        z-index: 20;
+        position: absolute;
+        bottom: -585px;
+        display: none;
+        width: 297px;
+        min-height: 585px;
+        padding-top: 35px;
+        padding-left: 55px;
+        padding-right: 120px;
+        background-color: #000000;
+    }
+
+    .menu-nav {
+        
+    }
+
+    .menu-nav-item {
+        position: relative;
+        display: inline-block;
+        width: 122px;
+    }
+
+    .menu-nav-item::after {
+        content: ">";
+        position: absolute;
+        right: 0;
+        top: 0;
     }
     
-    li:last-child .header-nav-link {
-        padding-right: 0;
-    } */
-    
-    /* __________________________________________________________________________ */
+    .menu-nav-link {        
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 2px;
+    }
+        
+     /* __________________________________________________________________________ */
     
     .welcome-container {
         height: 585px;
@@ -834,6 +946,32 @@ li:nth-child(6) .footer-nav-link {
     .welcome-slider-controls {
         width: 700px;
     }    
+    
+    .controls-num {
+        width: 71px;
+        height: 40px;
+        margin-right: 45px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .controls-num-item {
+        font-size: 20px;    
+        line-height: 40px;
+        font-weight: 400;
+        color: #ffffff;
+    }
+
+    .controls-dots {
+        height: 16px;
+        display: flex;
+        margin-right: 20px;    
+    }
+
+    .controls-dots-item {
+        width: 12px;
+        height: 12px;    
+    }
     
     /* __________________________________________________________________________ */
     
@@ -976,166 +1114,63 @@ li:nth-child(6) .footer-nav-link {
     
     /* __________________________________________________________________________ */
     
-    .tickets-container {
-        height: 893px;
-        padding-top: 75px;
-        padding-bottom: 75px;
-        color: #000000;
-    }
-    
-    .tickets-content {
-        display: flex;
-        flex-wrap: wrap;    
+    .tickets-container {        
+        min-height: 718px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     
     .tickets-title {
-        margin-bottom: 103px;
+        margin-bottom: 83px;
     }
     
     .tickets-picture {
-        max-width: 720px;
-        height: 550px;
-        margin-right: 60px;
+        max-width: 700px;
+        height: 440px;
+        margin-right: 0px;
     }
     
     .tickets-img {
         display: inline-block;
-        width: 100%;
+        width: 700px;
+        height: 440px;
     }
     
     .ticket-type-form {
-        justify-self: start;
-        width: 270px;
-        height: 211px;
-    }
-    
-    .ticket-type-title {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 33px;
-        margin-bottom: 50px;
-    }
-    
-    /* The container */
-    .input-container {
-        display: block;
-        position: relative;
-        padding-left: 40px;
-        margin-bottom: 25px;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      
-      /* Hide the browser's default radio button */
-      .input-container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-      }
-      
-      /* Create a custom radio button */
-      .input-checkmark {
-        position: absolute;
-        top: 8px;
-        left: 0;
-        height: 17px;
-        width: 17px;
-        border-radius: 50%;
-        border: 2px solid #000000;
-        box-sizing: border-box;
-        line-height: 26px;
-      }
-      
-      /* On mouse-over, add a grey background color */
-      .input-container:hover input ~ .input-checkmark {
-        border: 2px solid #9d8665;
-      }
-       
-      /* Create the indicator (the dot/circle - hidden when not checked) */
-      .input-checkmark:after {
-        content: "";
-        position: absolute;
         display: none;
-      }
-      
-      /* Show the indicator (dot/circle) when checked */
-      .input-container input:checked ~ .input-checkmark:after {
-        display: block;
-      }
-      
-      /* Style the indicator (dot/circle) */
-      .input-container .input-checkmark:after {
-          top: 3px;
-          left: 3px;
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          background: #000000;
-      }
+    }
     
     .tickets-amount-form {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: start;
         margin-left: auto;
         width: 175px;
-        height: 341px;
+        height: 440px;
     }
     
     .tickets-amount-title {
-        align-self: end;    
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 33px;
-        margin-bottom: 25px;
+        align-self: start;    
     }
     
     .tickets-amount-item {
-        width: 150px;
-        height: 101px;
-        padding-bottom: 10px;
+        width: 200px;
+        height: 90px;
+        margin-bottom: 25px;
+        
     }
     
-    .tickets-amount-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 150px;
-        height: 50px;
-        border: 3px solid #000000;
-        margin-top: 15px;
-    }
-    
-    .amount-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        width: 46px;
-        height: 44px;
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 100%;
-        background-color: #ffffff;
-    }
-    
-    .total-amount {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 33px;
-        letter-spacing: 1.65px;
-        margin-top: auto;;
-    }
-    
+    .tickets-amount-box {    
+        width: 175px;        
+        margin-top: 10px;
+    }      
+        
     .tickets-btn {
         width: 175px;
         height: 50px;
         background-color: #000000;
         color: #ffffff;
-        margin-top: 52px;
+        justify-self: end;
         letter-spacing: 2px;
     }
     
@@ -1147,46 +1182,50 @@ li:nth-child(6) .footer-nav-link {
     
     .tickets-parallax {
         width: 100%;
-        height: 475px;
-        margin-bottom: 75px;
+        height: 400px;
+        margin-bottom: 0px;
+        left: 500px;
+        top: 6346px;
         background-image: url(assets/img/parallax.jpg);
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         background-attachment: fixed;
     }
+
+    
     
     /* __________________________________________________________________________ */
     
     .contacts-container {
-        height: 1053px;
+        max-height: 734px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     
-    .contacts-content {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 103px;
+    .contacts-content {        
+        padding-top: 83px;
     }
     
     .contact-info {    
         width: 282px;
-        color: #000000;
     }
     
     .contact-info > p {
-        margin-bottom: 25px;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 15px;
     }
     
     .contact-info-title {
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 33px;
-        margin-bottom: 50px;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 35px;
     }
     
     .contact-map {
-        width: 960px;
-        height: 620px;
-        background-image: url(assets/img/Map.jpg);
+        width: 694px;
+        height: 454px;
     }
     
     
@@ -1194,52 +1233,27 @@ li:nth-child(6) .footer-nav-link {
     
     /* __________________________________________________________________________ */
     .footer-container {
-        min-height: 392px;
+        min-height: 368px;
     }
     
     .footer-content {
-        display: flex;
-        width: 100%;
-        min-height: 265px;
-        padding-top: 75px;
-        border-bottom: 3px solid #666666;
+        min-height: 246px;
     }
     
     .footer-logo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 195px;
+        width: 194px;
         height: 50px;
-        margin-right: 145px;
+        margin-right: 45px;
     }
     
     .footer-logo-img {
-        display: block;
-        width: 50px;
-        height: 34px;
-        background-image: url("assets/svg/logo.svg");
-        background-repeat: no-repeat;
-    }
-    
-    .footer-logo-text {
-        font-family: "Forum", cursive;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 31px;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-    }
-    
+        width: 49px;
+        height: 26px;
+        margin-right: 25px;
+    }    
     
     .footer-nav {
-        display: flex;
-        align-content: space-between;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 363px;
-        height: 128px;
-          
+        width: 313px;          
     }
     
     .footer-nav-link {
@@ -1256,7 +1270,7 @@ li:nth-child(6) .footer-nav-link {
     }
     
     .footer-social {
-        margin-left: 397px;
+        margin-left: auto;
         display: flex;
         justify-content: space-between;
         width: 340px;
