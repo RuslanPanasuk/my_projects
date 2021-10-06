@@ -843,22 +843,29 @@ li:nth-child(6) .footer-nav-link {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition: all 1s ease 0s;
     }
         
     .icon-close {
+        position: relative;
         display: none;
         width: 32px;
         height: 18px;
+        transition: all 1s ease 0s;
     }
 
     .item-close {
+        position: absolute;
         width: 32px;
         height: 2px;
         background-color: #ffffff;
+        
     }
 
     .item-close1 {
-        transform: rotateZ(45deg) translateY(0.5px);        
+
+        transform: rotateZ(45deg);
+                
     }
 
     .item-close2 {
@@ -1115,7 +1122,7 @@ li:nth-child(6) .footer-nav-link {
     /* __________________________________________________________________________ */
     
     .tickets-container {        
-        min-height: 718px;
+        max-height: 718px;
         padding-top: 60px;
         padding-bottom: 60px;
     }
@@ -1335,8 +1342,328 @@ li:nth-child(6) .footer-nav-link {
     
     /* __________________________________________________________________________ */
   }
-  @media (max-width: 796px) {
+  @media (max-width: 768px) {
     .container {
-        max-width: 796px;
+        max-width: 728px;   
+    }
+    
+    .section-title {        
+        font-size: 40px;        
+    } 
+    
+    /* ________________________________________*/
+    
+    .header-container {
+        height: 110px;    
+    }
+    
+    .header-logo {
+        width: 189px;
+    }
+
+    .side-menu {
+        z-index: 20;
+        position: absolute;
+        bottom: -585px;
+        display: none;
+        width: 297px;
+        min-height: 585px;
+        padding-top: 35px;
+        padding-left: 55px;
+        padding-right: 120px;
+        background-color: #000000;
+    } 
+
+     /* _________________________________________ */
+    
+    .welcome-container {
+        height: 861px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;          
+    }
+    
+    .welcome-card {
+        text-align: center;        
+        width: 400px;
+        height:200px;
+        margin-top: 0px;
+    }
+    
+    .welcome-card-title {
+        margin-bottom: 25px;
+        line-height: 60px;
+    }
+    
+    .welcome-card-text {    
+        font-size: 20px;
+        line-height: 23px;        
+    }
+    
+    .welcome-card-btn {            
+        display: none;
+    }
+    
+    .welcome-slider {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+        width: 728px;
+        height: 646px;
+        margin: 0 auto;
+    }
+    
+    .welcome-slider-body {
+        width: 728px;
+        height: 546px;
+    }
+    
+    .welcome-slider-controls {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;  
+        height: 100px;  
+    } 
+    
+    .controls-next-btn {
+        margin-right: 0;
+    }  
+    
+    /* __________________________________________________________________________ */
+    
+    .container-visiting {
+        min-height: 1226px;
+        padding-top: 40px;
+        padding-bottom: 40px;       
+    }
+    
+    .visiting-cards {        
+        gap: 40px 56px;
+        padding-top: 63px;  
+    }
+    
+    .visiting-cards-item {
+        width: 280px;
+        height: 301px;
+    }
+        
+    .visiting-card-title {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .visiting-card-subhed {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    
+    /* ------------------------------------------------------------------------------------------ */
+    
+    .explore-container {
+        height: 908px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .explore-title {
+        margin-bottom: 63px;
+    }
+    
+    .explore-text { 
+        display: none;
+    }
+    
+    .explore-slider{
+        margin: 0 auto;        
+        margin-top: 0px;
+    }
+    
+    /* __________________________________________________________________________ */
+    
+    .video-container {
+        height: 837px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .video-content {
+        width: 100%;
+        height: 80px;
+    }
+      
+    .video-slider {
+        margin-top: 20px;
+    }
+    
+    
+    .video-player-img {
+        width: 100%;
+        height: auto;    
+    }
+
+    .video-slider-body {
+        height: 199px;
+    }
+    
+        
+    /* __________________________________________________________________________ */
+           
+    .gallery-container {
+        height: 1220px;
+        padding-top: 40px;
+    }
+    
+    .gallery-inner-container {
+        padding-top: 40px;            
+        height: 3800px;
+    }
+    
+    .gallery-item {
+        width: 352px;
+    }
+    
+    .gallery-item:nth-child(11) {
+        margin-top: 0px;
+    }
+    
+    /* __________________________________________________________________________ */
+    
+    .tickets-container {        
+        max-height: 633px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .tickets-title {
+        margin-bottom: 63px;
+    }
+    
+    .tickets-picture {
+        max-width: 444px;
+        height: 340px;
+    }
+    
+    .tickets-img {
+        display: inline-block;
+        width: 444px;
+        height: 340px;
+    }
+    
+    .ticket-type-form {
+        display: none;
+    }
+    
+    .tickets-amount-form {
+        height: 340px;
+    }
+    
+    .tickets-amount-title {
+        align-self: start;
+        margin-bottom: 39px;    
+    }
+    
+    .tickets-amount-item {
+        width: 175px;
+        height: 86px;
+        margin-bottom: 25px;
+        
+    }
+    
+    .tickets-parallax {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 0px;
+        left: 500px;
+        top: 5685px;
+        background-image: url(assets/img/parallax.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    
+    
+    /* __________________________________________________________________________ */
+    
+    .contacts-container {
+        max-height: 898px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .contacts-content {        
+        padding-top: 63px;
+        flex-direction: column;
+    }
+    
+    .contact-info > p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    
+    .contact-info-title {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 40px;
+    }
+    
+    .contact-map {
+        width: 100%;
+        height: autox;
+    }
+    
+    
+    
+    
+    /* __________________________________________________________________________ */
+    .footer-container {
+        max-height: 411px;
+    }
+    
+    .footer-content {
+        flex-wrap: wrap;
+        padding-top: 40px;
+        min-height: 308px;
+    }
+    
+    .footer-logo {
+        width: 199px;
+        height: 100%;
+        margin-right: 99px;
+    }
+    
+    .footer-logo-img {
+        width: 49px;
+        height: 26px;
+        margin-right: 25px;
+    }    
+    
+    .footer-nav {
+        margin-bottom: 42px;
+        width: 360px; 
+        height: 121px;         
+    }
+    
+    .footer-nav-link {
+        display: block;
+        width: 107px;
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    
+    .footer-social {
+        margin-left: 298px;
+        margin-top: 0px;
+    }
+    
+    .footer-rights {
+        height: 100px;
     }    
   }
