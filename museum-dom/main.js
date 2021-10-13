@@ -1,40 +1,82 @@
 window.onload = function () {
 
-
-  const slider = tns({
-    container: '.welcome-slider-body',
-    loop: true,
-    items: 1,
-    slideBy: 'page',
-    nav: false,   
-    autoplay: false,
-    speed: 400,
-    autoplayButtonOutput: false,
-    mouseDrag: true,
-    lazyload: true,
-    controlsContainer: ".controls-arrows", 
-    
-  });
-
-  const slider2 = tns({  
-    "container": ".video-slider-body",
-    "items": 2,
-    "nav": false,
-    "gutter": 20,
-    "swipeAngle": false,
-    "speed": 400,
-    "controlsContainer": ".video-slider-controls",
-    "responsive": {
-      "768": {
-        "items": 2,
-        "gutter": 20,  
+  if(document.querySelector('.welcome-slider')){
+    new Swiper('.welcome-slider',{
+      observer: true,
+      observeParents: true,
+      slidesPerView: '1',
+      spaceBetween: 24,
+      watchOverflow: true,
+      speed: 800,
+      loop: true,
+      // watchOverflow: true,
+      // loopAdditionalSlides: 5,
+      // preloadImages: false,
+      // parallax: true,
+      //Dotts
+      pagination: {
+        el: '.controls-dots',
+        clickable: true,
+        bulletClass: 'controls-dots-item',
+        bulletElement: 'div',
+        bulletActiveClass: 'controls-dots-active',
       },
-      "1024": {
-        "items": 3,
-        "gutter": 42,  
-      },     
-    },
-  });
+      //Arrows
+      navigation: {
+        nextEl: '.controls-next-btn',
+        prevEl: '.controls-prev-btn',
+      }
+      });
+  }
+
+  if(document.querySelector('.video-slider')){
+    new Swiper('.video-slider',{
+      observer: true,
+      observeParents: true,
+      slidesPerView: '3',
+      spaceBetween: 20,
+      watchOverflow: true,
+      speed: 800,
+      loop: true,
+      // watchOverflow: true,
+      // loopAdditionalSlides: 5,
+      // preloadImages: false,
+      // parallax: true,
+      //Dotts
+      pagination: {
+        el: '.video-controls-dots',
+        clickable: true,
+        // bulletClass: 'controls-dots-item',
+        // bulletElement: 'div',
+        // bulletActiveClass: 'controls-dots-active',
+      },
+      //Arrows
+      navigation: {
+        nextEl: '.video-controls-next',
+        prevEl: '.video-controls-prev',
+      }
+      });
+  }  
+
+  // const slider2 = tns({  
+  //   "container": ".video-slider-body",
+  //   "items": 2,
+  //   "nav": false,
+  //   "gutter": 20,
+  //   "swipeAngle": false,
+  //   "speed": 400,
+  //   "controlsContainer": ".video-slider-controls",
+  //   "responsive": {
+  //     "768": {
+  //       "items": 2,
+  //       "gutter": 20,  
+  //     },
+  //     "1024": {
+  //       "items": 3,
+  //       "gutter": 42,  
+  //     },     
+  //   },
+  // });
 
   // const progress_video = document.querySelector('.progress-video');
 

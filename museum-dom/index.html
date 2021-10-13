@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.ico">
@@ -91,13 +91,13 @@
                         <p class="welcome-card-text">From the castle to the museum</p>
                         <a class="welcome-card-btn button" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">Discover the Louvre</a>
                     </div>
-                    <div class="welcome-slider">
-                        <div class="welcome-slider-body">
-                            <img class="welcome-slider-image" src="assets/img/welcome-slider/1.jpg" alt="image">                     
-                            <img class="welcome-slider-image" src="assets/img/welcome-slider/2.jpg" alt="image">                     
-                            <img class="welcome-slider-image" src="assets/img/welcome-slider/3.jpg" alt="image">                     
-                            <img class="welcome-slider-image" src="assets/img/welcome-slider/4.jpg" alt="image">                     
-                            <img class="welcome-slider-image" src="assets/img/welcome-slider/5.jpg" alt="image">                     
+                    <div class="welcome-slider swiper">
+                        <div class="welcome-slider-body swiper-wrapper">
+                            <div class="swiper-slide"><img class="welcome-slider-image" src="assets/img/welcome-slider/1.jpg" alt="image"></div>               
+                            <div class="swiper-slide"><img class="welcome-slider-image" src="assets/img/welcome-slider/2.jpg" alt="image"></div>               
+                            <div class="swiper-slide"><img class="welcome-slider-image" src="assets/img/welcome-slider/3.jpg" alt="image"></div>               
+                            <div class="swiper-slide"><img class="welcome-slider-image" src="assets/img/welcome-slider/4.jpg" alt="image"></div>               
+                            <div class="swiper-slide"><img class="welcome-slider-image" src="assets/img/welcome-slider/5.jpg" alt="image"></div>               
                         </div>
                         <div class="welcome-slider-controls">
                             <div class="controls-num">
@@ -105,16 +105,12 @@
                                 <div class="controls-num-item">|</div>
                                 <div class="controls-num-item">05</div>
                             </div>
-                            <div class="controls-dots">                                
-                                <div class="controls-dots-item button"></div>
-                                <div class="controls-dots-item"></div>
-                                <div class="controls-dots-item"></div>
-                                <div class="controls-dots-item"></div>
-                                <div class="controls-dots-item"></div>
+                            <div class="swiper-pagination controls-dots">                                
+                                <div class="controls-dots-item" ></div>                                
                             </div>
                             <div class="controls-arrows">
-                                <div class="controls-prev-btn btn"></div>
-                                <div class="controls-next-btn btn"></div>
+                                <div class="swiper-button-prev controls-prev-btn btn"></div>
+                                <div class="swiper-button-next controls-next-btn btn"></div>
                             </div>
                         </div>
                     </div>
@@ -196,19 +192,20 @@
 
                     <img class="video-player-img video-controls" src="assets/video/video_controls.jpg" alt="video controls">
                 </div>
-                <div class="video-slider">
-                    <div class="video-slider-body">
-                        <iframe loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="swiper video-slider">
+                    <div class="swiper-wrapper video-slider-body">
+                        <iframe class="swiper-slide" loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="swiper-slide" loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="swiper-slide" loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="swiper-slide" loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="swiper-slide" loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="swiper-slide" loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="swiper-slide" loading="lazy" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="video-slider-controls">
-                        <div class="video-controls-prev video-btn"></div>
-                        <div class="video-controls-next video-btn"></div>
+                        <div class="swiper-button-prev video-controls-prev video-btn"></div>
+                        <div class="video-controls-dots"></div>
+                        <div class="swiper-button-next video-controls-next video-btn"></div>
                     </div>
                 </div>
             </div>
@@ -400,7 +397,8 @@
                                 <button type="submit" class="buy-ticket form-ticket" data-animation="ripple">Book</button>
                                 
                             </div>     
-                        </div>                            
+                        </div>
+                        <div class="booking-tickets__btn-close"></div>                         
                     </div>
                 </div>
             </div>
@@ -478,7 +476,7 @@
             </div>
         </div>
     </footer>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="main.js"></script>    
 </body>
 </html>
