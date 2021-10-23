@@ -2,6 +2,9 @@ const time = document.querySelector('.time');
 const date = document.querySelector('.date');
 const greeting = document.querySelector('.greeting');
 const userName = document.querySelector('.userName');
+const slideNext = document.querySelector('.slide-next');
+const slidePrev = document.querySelector('.slide-prev');
+let randomNum = 0;
 
 function setLocalStorage() {
     localStorage.setItem('userName', userName.value);
@@ -16,6 +19,43 @@ function getLocalStorage() {
 window.addEventListener('load', getLocalStorage)
 
 
+function getRandomNum() {
+    randomNum = Math.floor(1 + Math.random() * 20);
+    return randomNum;
+}
+
+function setBg() {
+    const timeOfDay = getTimeOfDay().toLowerCase();
+    const bgNum = randomNum.toString().padStart(2, "0");
+    const img = new Image();
+    img.src = `https://raw.githubusercontent.com/RuslanPanasuk/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`; 
+    img.onload = () => {      
+        document.body.style.backgroundImage = `url('https://raw.githubusercontent.com/RuslanPanasuk/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`
+    };
+}
+window.addEventListener('load', setBg)
+
+function getSlideNext() {
+    if (randomNum === 20) {
+        randomNum = 1;
+    } else {        
+        randomNum = randomNum + 1;
+    }
+    setBg();
+}
+
+function getSlidePrev() {
+    if (randomNum === 1) {
+        randomNum = 20;
+    } else {        
+        randomNum = randomNum - 1;
+    }
+    setBg();
+}
+
+slideNext.addEventListener('click', getSlideNext)
+
+slidePrev.addEventListener('click', getSlidePrev)
 
 function getTimeOfDay() {
     const dateValue = new Date();
@@ -27,7 +67,7 @@ function getTimeOfDay() {
         case currentHours > 17:
             return "Evening";
             case currentHours > 11:
-                return "Day";
+                return "Afternoon";
         case currentHours > 5:
             return "Morning"; 
     }
@@ -51,8 +91,10 @@ function showTime() {
     const currentTime = dateValue.toLocaleTimeString();
     time.textContent = currentTime;
     showDate();
-    showGreeting();
+    showGreeting();    
     setTimeout(showTime, 1000);    
 }
+
 showTime();
+getRandomNum();
 
