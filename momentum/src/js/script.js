@@ -1,6 +1,7 @@
 const time = document.querySelector('.time');
 const date = document.querySelector('.date');
 const greeting = document.querySelector('.greeting');
+const userName = document.querySelector('.userName');
 
 function setLocalStorage() {
     localStorage.setItem('userName', userName.value);
