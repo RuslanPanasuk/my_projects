@@ -10,8 +10,25 @@ const weatherDescription = document.querySelector('.weather-description');
 const wind = document.querySelector('.wind');
 const humidity = document.querySelector('.humidity');
 const city= document.querySelector('.city');
+const quote= document.querySelector('.quote');
+const author= document.querySelector('.author');
+const changeQuote= document.querySelector('.change-quote');
 
 let randomNum = 0;
+
+
+async function getQuotes() {
+    const quotes = 'data-quotes.json';
+    const res = await fetch(quotes);
+    const data = await res.json();
+          
+    const randomQuoteNum = Math.floor(0 + Math.random() * data.length);
+    quote.textContent = data[randomQuoteNum].quote;
+    author.textContent = data[randomQuoteNum].source;
+}
+getQuotes();
+changeQuote.addEventListener('click', getQuotes);
+
 
 async function getWeather() {  
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=7ec6eaf31a44ed9b43d55fac127b0259&units=metric`;
