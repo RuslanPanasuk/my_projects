@@ -1,3 +1,5 @@
+import playList from './playlist.js';
+
 const time = document.querySelector('.time');
 const date = document.querySelector('.date');
 const greeting = document.querySelector('.greeting');
@@ -13,15 +15,69 @@ const city= document.querySelector('.city');
 const quote= document.querySelector('.quote');
 const author= document.querySelector('.author');
 const changeQuote= document.querySelector('.change-quote');
+const audio = document.querySelector('audio');
+const play = document.querySelector('.play');
+const playPrev = document.querySelector('.play-prev');
+const playNext = document.querySelector('.play-next');
+const playerControls = document.querySelector('.player-controls');
+
+
 
 let randomNum = 0;
+let playNum = 0;
 
+let isPlay = false;
+
+function playAudio() {
+    if(!isPlay) {        
+        audio.src = playList[playNum].src;
+        audio.currentTime = 0;
+        audio.play();
+        isPlay = true;
+    } else {
+        audio.pause();
+        isPlay = false;
+    }     
+}
+
+function toggleBtn() {
+    if(!isPlay) {        
+        play.classList.add('pause');
+    } else {
+        play.classList.remove('pause');
+    }
+}
+playerControls.addEventListener('click', toggleBtn);
+
+function playPrevAudio() {
+    if (playNum > 0) {
+        playNum = playNum - 1;
+    } else {
+        playNum = playList.length -1;
+    }
+    isPlay = false;
+    playAudio();
+}
+
+function playNextAudio() {
+    if (playNum < (playList.length -1)) {
+        playNum = playNum + 1;
+    } else {
+        playNum = 0;
+    }
+    isPlay = false;
+    playAudio();
+}
+
+play.addEventListener('click', playAudio);
+playPrev.addEventListener('click', playPrevAudio);
+playNext.addEventListener('click', playNextAudio);
 
 async function getQuotes() {
     const quotes = 'data-quotes.json';
     const res = await fetch(quotes);
     const data = await res.json();
-          
+
     const randomQuoteNum = Math.floor(0 + Math.random() * data.length);
     quote.textContent = data[randomQuoteNum].quote;
     author.textContent = data[randomQuoteNum].source;
