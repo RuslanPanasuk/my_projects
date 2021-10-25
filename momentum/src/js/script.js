@@ -4,17 +4,43 @@ const greeting = document.querySelector('.greeting');
 const userName = document.querySelector('.userName');
 const slideNext = document.querySelector('.slide-next');
 const slidePrev = document.querySelector('.slide-prev');
+const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const weatherDescription = document.querySelector('.weather-description');
+const wind = document.querySelector('.wind');
+const humidity = document.querySelector('.humidity');
+const city= document.querySelector('.city');
+
 let randomNum = 0;
+
+async function getWeather() {  
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=7ec6eaf31a44ed9b43d55fac127b0259&units=metric`;
+    const res = await fetch(url);
+    const data = await res.json(); 
+    
+    weatherIcon.className = 'weather-icon owf';
+    weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+    temperature.textContent = `${Math.round(data.main.temp)}°C`;
+    weatherDescription.textContent = data.weather[0].description;
+    wind.textContent = `Wind speed: ${Math.round(data.wind.speed)} m\/c`;    
+    humidity.textContent = `Humidity: ${data.main.humidity}%`;    
+}
+city.addEventListener('change', getWeather)
+getWeather();
 
 function setLocalStorage() {
     localStorage.setItem('userName', userName.value);
+    localStorage.setItem('city', city.value);
 }
 window.addEventListener('beforeunload', setLocalStorage)
 
 function getLocalStorage() {
     if(localStorage.getItem('userName')) {
         userName.value = localStorage.getItem('userName');
-    }
+    };
+    if(localStorage.getItem('city')) {
+        city.value = localStorage.getItem('city');
+    };
 }
 window.addEventListener('load', getLocalStorage)
 
